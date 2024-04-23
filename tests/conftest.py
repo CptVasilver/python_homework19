@@ -3,6 +3,7 @@ from utils import attach
 from selene import browser
 import os
 from appium.options.android import UiAutomator2Options
+from appium import webdriver
 from dotenv import load_dotenv
 
 
@@ -30,8 +31,8 @@ def mobile_management_android():
             "accessKey": accesskey
         }
     })
-    browser.config.driver_remote_url = "http://hub.browserstack.com/wd/hub"
-    browser.config.driver_options = options
+    browser.config.driver = webdriver.Remote('http://hub.browserstack.com/wd/hub', options=options)
+
     browser.config.timeout = float(os.getenv('timeout', '10.0'))
 
     yield
