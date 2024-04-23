@@ -1,4 +1,4 @@
-from allure_commons._allure import step
+from allure import step
 from selene import browser, have
 from appium.webdriver.common.appiumby import AppiumBy
 
@@ -12,6 +12,7 @@ def test_search():
         results = browser.all((AppiumBy.ID, 'org.wikipedia.alpha:id/page_list_item_title'))
         results.should(have.size_greater_than(0))
         results.first.should(have.text('Appium'))
+
 
 def test_search_cinema():
     with step("Search Pulp Fiction"):

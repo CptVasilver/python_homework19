@@ -32,7 +32,7 @@ def mobile_management_android():
     })
     browser.config.driver_remote_url = "http://hub.browserstack.com/wd/hub"
     browser.config.driver_options = options
-    browser.config.timeout = float(os.getenv('timeout', '3.0'))
+    browser.config.timeout = float(os.getenv('timeout', '10.0'))
 
     yield
 
