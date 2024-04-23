@@ -2,6 +2,7 @@ from allure_commons._allure import step
 from selene import browser, have
 from appium.webdriver.common.appiumby import AppiumBy
 
+
 def test_search():
     with step("Search Pulp Fiction"):
         browser.element((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")).click()

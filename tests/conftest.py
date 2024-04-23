@@ -1,13 +1,8 @@
 import pytest
-from appium.options.android import UiAutomator2Options
 from selene import browser
 import os
-from appium import webdriver
 from appium.options.android import UiAutomator2Options
-from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-import time
+
 
 @pytest.fixture(scope='function', autouse=True)
 def mobile_management_android():
